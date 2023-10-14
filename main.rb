@@ -16,7 +16,7 @@ class Main
     welcome_message
     loop do
     show_menu
-    selected = getUser_input
+    selected = getuser_input
     break if selected == 7
 
     select_option(selected, @app)
