@@ -14,6 +14,15 @@ class Student < Person
     classroom.students.push(self) unless classroom.students.include?(self)
   end
 
+  def to_h
+    {
+      id: @id,
+      name: @name,
+      age: @age,
+      # ... other attributes ...
+    }
+  end
+
   def play_hooky
     '¯\\(ツ)/¯'
   end

@@ -30,6 +30,16 @@ class Person < Nameable
     Rental.new(date, book, self)
   end
 
+  def to_h
+    {
+      id: @id,
+      name: @name,
+      age: @age,
+      # ... other attributes ...
+    }
+
+  end
+  
   private
 
   def of_age?

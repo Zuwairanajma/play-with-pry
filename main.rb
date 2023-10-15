@@ -10,6 +10,7 @@ class Main
   
   def initialize
   @app = App.new
+  @app.load_all_data
   end
   
   def run
