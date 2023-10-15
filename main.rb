@@ -1,4 +1,4 @@
-require_relative 'app'
+require_relative 'app1'
 require_relative 'show_menu'
 require_relative 'options'
 require_relative 'introduction'
@@ -10,7 +10,7 @@ class Main
   
   def initialize
   @app = App.new
-  @app.load_all_data
+  # @app.load_all_data
   end
   
   def run

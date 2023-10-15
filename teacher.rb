@@ -7,14 +7,7 @@ class Teacher < Person
     super(age, parent_permission, name)
     @specialization = specialization
   end
-  def to_h
-    {
-      id: @id,
-      name: @name,
-      age: @age,
-      # ... other attributes ...
-    }
-  end
+  
   def can_use_services?
     true
   end
