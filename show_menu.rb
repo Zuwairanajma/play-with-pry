@@ -11,7 +11,7 @@ module MenuMethods
         puts '7 - Exit'
       end
     
-      def getuser_input
+    def getuser_input
     gets.chomp.to_i  
     end
     def show_invalid_input

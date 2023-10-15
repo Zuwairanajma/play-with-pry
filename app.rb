@@ -4,6 +4,7 @@ require_relative 'rental'
 require_relative 'person'
 require_relative 'student'
 require_relative 'teacher'
+require_relative 'user_input'
 
 class App
   attr_reader :books, :person, :rentals, :classroom
