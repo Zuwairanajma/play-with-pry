@@ -1,5 +1,5 @@
 class UserInput
-    def self.get
+    def self_get
       gets.chomp.to_i
     end
 
