@@ -96,7 +96,7 @@ class App
     puts 'select a person by number'
     @person = read_file('people.json')
     @person.each_with_index do |person, index|
-      puts "#{index} - #{person['class']}, Name: #{person['name']}"
+      puts "#{index} - #{person['age']}, Name: #{person['name']}"
     end
 
     person_index = UserInput.new.self_get
@@ -112,7 +112,7 @@ class App
 
   # Listing rentals method
   def list_rentals_for_person
-    rentals = read_file('rental.json')
+    @rentals = read_file('rental.json')
     puts 'All Rentals:'
     @rentals.each do |rental|
       puts "id of person: #{rental.person.id}"

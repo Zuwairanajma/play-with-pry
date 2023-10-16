@@ -316,7 +316,6 @@
 #     @books = load_data_from_json('books')
 #   end
 
-  
 #   def save_people_to_json
 #     people_data = @people.map(&:to_h)
 
@@ -345,4 +344,3 @@
 #     @rentals = load_data_from_json('rentals')
 #   end
 # end
-

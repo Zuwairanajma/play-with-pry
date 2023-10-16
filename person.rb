@@ -1,5 +1,6 @@
 require_relative 'nameable'
 require_relative 'rental'
+# require_relative 'teacher'
 
 class Person < Nameable
   def initialize(age, parent_permission, name = 'Unknown')
@@ -31,7 +32,7 @@ class Person < Nameable
   end
 
   def to_hash
-    {
+    hash = {
       id: @id,
       name: @name,
       age: @age,
@@ -39,8 +40,17 @@ class Person < Nameable
       # ... other attributes ...
     }
 
+    if is_a?(Teacher)
+      hash.merge!(specialization: @specialization)
+      hash[:specialization] = @specialization
+      hash.delete(:parent_permission)
+    else
+      hash[:parent_permission] = @parent_permission
+    end
+
+    hash
   end
-  
+
   private
 
   def of_age?
